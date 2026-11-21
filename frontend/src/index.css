@@ -1,0 +1,164 @@
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #f8fafc;
+  background: #090b14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-violet: #8b5cf6;
+  --color-purple: #a855f7;
+  --color-orange: #ff8a3d;
+  --color-cyan: #22d3ee;
+  --color-magenta: #ec4899;
+  --color-green: #42d392;
+  --color-amber: #f3a94b;
+  --color-coral: #f06469;
+  --color-background: #090b14;
+  --color-surface: #131827;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-border: rgba(148, 163, 184, 0.14);
+  --font-sans: Inter, "Segoe UI", Arial, sans-serif;
+  --color-surface-raised: #171d2d;
+  --color-input: rgba(8, 12, 23, 0.78);
+  --chart-grid: rgba(148, 163, 184, 0.16);
+  --chart-label: #94a3b8;
+  --risk-high: #f06469;
+  --risk-medium: #f3a94b;
+  --risk-low: #42d392;
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.2);
+  --sidebar-background: rgba(10, 13, 24, 0.94);
+  --surface-gradient: linear-gradient(145deg, rgba(21, 27, 44, 0.94), rgba(16, 21, 35, 0.94));
+  --surface-soft: rgba(255, 255, 255, 0.035);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  color: #25243a;
+  background: #f5f4fb;
+  --color-background: #f5f4fb;
+  --color-surface: #ffffff;
+  --color-surface-raised: #f8f7ff;
+  --color-glass: rgba(255, 255, 255, 0.86);
+  --color-text: #242239;
+  --color-muted: #6f6b83;
+  --color-border: rgba(91, 73, 139, 0.15);
+  --color-violet: #7044d8;
+  --color-purple: #8a4ce0;
+  --color-cyan: #138ca6;
+  --color-magenta: #c83d8c;
+  --color-green: #19865d;
+  --color-amber: #a9630e;
+  --color-coral: #bf454b;
+  --color-input: #fbfaff;
+  --chart-grid: rgba(78, 70, 111, 0.15);
+  --chart-label: #67647b;
+  --risk-high: #c6454e;
+  --risk-medium: #b56a12;
+  --risk-low: #19865d;
+  --shadow-card: 0 14px 36px rgba(54, 43, 91, 0.08);
+  --sidebar-background: rgba(255, 255, 255, 0.96);
+  --surface-gradient: linear-gradient(145deg, #ffffff, #fbfaff);
+  --surface-soft: #f7f5fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #3a3456 #0b0e18;
+  scrollbar-width: thin;
+}
+
+body {
+  position: relative;
+  display: block;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-sans);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 9% 0%, rgba(86, 51, 153, 0.22), transparent 34%),
+    radial-gradient(ellipse at 82% 17%, rgba(26, 82, 132, 0.16), transparent 38%),
+    radial-gradient(ellipse at 62% 91%, rgba(100, 35, 101, 0.11), transparent 36%),
+    linear-gradient(145deg, #090b14 0%, #0c101c 52%, #090b14 100%);
+  content: "";
+  pointer-events: none;
+}
+
+:root[data-theme="light"] body::before {
+  background:
+    radial-gradient(ellipse at 9% 0%, rgba(139, 92, 246, 0.09), transparent 34%),
+    radial-gradient(ellipse at 82% 17%, rgba(34, 211, 238, 0.06), transparent 38%),
+    linear-gradient(145deg, #f8f7ff 0%, #f1f0f8 52%, #faf9fd 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.7);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(139, 92, 246, 0.72);
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3456;
+  border: 2px solid #0b0e18;
+  border-radius: 999px;
+}
+
+:root[data-theme="light"] {
+  scrollbar-color: #b4a8d7 #f2f0f8;
+}
+
+:root[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f2f0f8;
+}
+
+:root[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #b4a8d7;
+  border-color: #f2f0f8;
+}
