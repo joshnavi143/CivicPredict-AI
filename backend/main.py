@@ -42,6 +42,7 @@ frontend_origin = os.environ.get("CIVICPREDICT_FRONTEND_URL", "").strip().rstrip
 allowed_origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://civicpredict-frontend.onrender.com"
 ]
 if frontend_origin:
     allowed_origins.append(frontend_origin)
